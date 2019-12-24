@@ -54,7 +54,10 @@ int operand(char *inArray, int i){
         sign = 1;
         return 6;
     }
-    else if ((top != -1) && ((inArray[i] == '+') || (inArray[i] == '-')) && ((inArray[i - 1] == '|') || (inArray[i - 1] == '&') || (inArray[i - 1] == '<') || (inArray[i - 1] == '>') || (inArray[i - 1] == '-') || (inArray[i - 1] == '+') || (inArray[i - 1] == '*') || (inArray[i - 1] == '/') || (inArray[i - 1] == '!'))){
+    else if ((top != -1) && ((inArray[i] == '+') || (inArray[i] == '-')) && 
+             ((inArray[i - 1] == '|') || (inArray[i - 1] == '&') || (inArray[i - 1] == '<') || 
+              (inArray[i - 1] == '>') || (inArray[i - 1] == '-') || (inArray[i - 1] == '+') || 
+              (inArray[i - 1] == '*') || (inArray[i - 1] == '/') || (inArray[i - 1] == '!'))){
         return 6;
     }
     else if (inArray[i] == '|'){
